@@ -1,0 +1,20 @@
+.col-md-12 {
+    width: 640px;
+    height: auto;
+    margin: 0 auto;
+    padding: 10px;
+    position: relative;
+}
+
+.card-title-add {
+    margin-left: 45%;
+}
+
+.form-control {
+    max-width: 450px;
+    margin-left: 3%;
+}
+
+.form-select {
+    margin-left: -75%;
+}
