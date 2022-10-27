@@ -74,7 +74,7 @@ const Login = ({setToken, token, setName, setRole}) => {
       
       <button type="button" className="btn btn-dark" style ={{backgroundColor:'#5C6672'}} onClick={() => 
         handleSubmit()
-        }>Trimite</button>
+        }>Plateste</button>
 
     </form>
 

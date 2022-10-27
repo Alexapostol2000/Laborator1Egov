@@ -6,6 +6,8 @@ const Home = () => {
 const data = {
       title: 
       <center className="centerFaq">
+        <br></br>
+        <br></br><br></br>
       <p style={
         {
         color: "#A4C2A5",
@@ -15,24 +17,24 @@ const data = {
         width: 500,
         pading: 10
         }}> 
-        FAQ (How it works?) </p>
+        Intrebari frecvente </p>
         </center>,
       rows: [
         {
-          title: "How do I sign up?",
-          content: "Accounts can only be created by administrators. Contact an admin to sign up."
+          title: "La ce ma ajuta platforma",
+          content: "Prin platforma noastra poti face plati rapide si directe catre autoritati publice"
         },
         {
-          title: "How do I upload a file?",
-          content: " To upload a file you access the upload page and complete the form you will find there. "
+          title: "Am nevoie de cont?",
+          content: "Pentru a efectua o plata nu e nevoie de cont, tot ce trebuie sa faci e sa dai click pe plateste si sa completezi campurile"
         },
         {
-          title: "In which section can I manage my files? ",
-          content: "To manage the available files you access the 'File manager' section."
+          title: "In urma platii se va genera vreun document?",
+          content: "Desigur dupa plata un document pdf va fi generat automat cu detaliile acesteia"
         },
         {
-          title: "How can I manage a file?",
-          content: "If you want to delete, view or give access to a file you have such permissions, you will find each specific button in the 'File manager' section. In case you want to allow someone, you have to add theirs username in the case and press the access button."
+          title: "E sigur sa platesc online?",
+          content: "Prin efectuarea platii online poate fi scutit timp pretios"
         }]
     }
     
@@ -40,10 +42,13 @@ const data = {
 return (
     <center>
     <div style={{paddingTop:"3%"}}>
-        <h1 style = {{color: "#A4C2A5", fontFamily: "quicksand", fontWeight:"bold"}}> Welcome to the file sharing platform!  </h1>
+        <h1 style = {{color: "#A4C2A5", fontFamily: "quicksand", fontWeight:"bold"}}> Bun venit pe platforma de plati online!  </h1>
         <br></br>
         <br></br>
-        <img src="https://m.com-magazin.de/img/1/5/0/8/3/4/2/Filesharing_w640_h400.jpg"></img>
+        <br></br>
+        <br></br>
+        
+        <img src="https://www.librapay.ro/wp-content/uploads/2013/11/formular-plata-responsive-dark.png"></img>
     </div>
     <div className="faq-div">      
         <Faq data={data} style = {{pading:'0px 10px'}}/>
