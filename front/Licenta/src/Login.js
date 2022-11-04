@@ -6,22 +6,28 @@ import validator from 'validator'
 
 
 
-async function login(credentials) {
-  return fetch('http://localhost:8080/game/login', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(credentials)
-  })
-    .then(data => data.json())
- }
 
  const getLength = (number) => {
   return number.toString().length;
 }
 
+function getDifferenceInDays(date1, date2) {
+  const diffInMs = Math.abs(date2 - date1);
+  return diffInMs / (1000 * 60 * 60 * 24);
+}
+
+const reducere = (date) => {
+  var result = false
+  var today = new Date()
+  if(getDifferenceInDays(today,date) < 15){
+    result = true;
+  }
+return result
+}
+
 const Plata = ({setToken, token, setName, setRole}) => {
+
+
   const alert = useAlert();
   const [nume, setNume] = useState("");
   const [prenume, setPrenume] = useState("");
@@ -155,7 +161,8 @@ const Plata = ({setToken, token, setName, setRole}) => {
             alert.error("Trebuie sa introduci un email valid")
           )
         ):(
-          alert.error("Trebuie sa fii de acord cu termenii si conditiile")
+          console.log(date)
+          //alert.error("Trebuie sa fii de acord cu termenii si conditiile")
         )
         }  
       }>Plateste</button>
