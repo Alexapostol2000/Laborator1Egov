@@ -22,7 +22,7 @@ const data = {
       rows: [
         {
           title: "La ce ma ajuta platforma",
-          content: "Prin platforma noastra poti face plati rapide si directe catre autoritati publice"
+          content: "Prin platforma noastra poti plati usor si rapid amenzile auto"
         },
         {
           title: "Am nevoie de cont?",
@@ -42,7 +42,7 @@ const data = {
 return (
     <center>
     <div style={{paddingTop:"3%"}}>
-        <h1 style = {{color: "#A4C2A5", fontFamily: "quicksand", fontWeight:"bold"}}> Bun venit pe platforma de plati online!  </h1>
+        <h1 style = {{color: "#A4C2A5", fontFamily: "quicksand", fontWeight:"bold"}}> Bun venit pe platforma de plati online a amenzilor rutiere!  </h1>
         <br></br>
         <br></br>
         <br></br>
