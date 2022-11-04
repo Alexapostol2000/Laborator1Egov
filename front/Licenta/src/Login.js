@@ -36,11 +36,7 @@ const Plata = ({setToken, token, setName, setRole}) => {
 
 
 
-  if(token) {
-    return (
-      <Navigate to="/"/>
-    );
-  }
+ 
   
   const handleSubmit = async (e) => {
     
@@ -123,8 +119,36 @@ const Plata = ({setToken, token, setName, setRole}) => {
         check === "on" ?(
           validator.isEmail(email) === true? (
             getLength(cnp) === 13? (
-            alert.success("Plata efectuata cu succes")
-            //handleSubmit()
+              judet === ''?(
+                alert.error("Trebuie sa selectezi un judet")
+              ):(
+                adresa === ''?(
+                  alert.error("Trebuie sa introduci adresa de domiciliu")
+                ):(
+                  nume === ''?(
+                    alert.error("Va rugam introduceti numele")
+                  ):(
+                    prenume === ''?(
+                      alert.error("Va rugam introduceti prenumele")
+                    ):(
+                      motiv === ''?(
+                        alert.error("Va rugam introduceti motivul amendarii")
+                      ):(
+                        date === ''?(
+                          alert.error("Va rugam data amenzii")
+                        ):(
+                          suma === ''?(
+                            alert.error("Va rugam introduceti suma amenzii")
+                          ):(
+                            alert.success("Plata efectuata cu succes")
+                            //handleSubmit()
+                          )
+                        )
+                      )
+                    )
+                  )
+                )
+              )
             ):
             (alert.error("CNP invalid"))
           ):(
