@@ -12,18 +12,29 @@ import validator from 'validator'
 }
 
 function getDifferenceInDays(date1, date2) {
-  const diffInMs = Math.abs(date2 - date1);
-  return diffInMs / (1000 * 60 * 60 * 24);
+  const dt_date1 = new Date(date1);
+  const dt_date2 = new Date(date2);
+  var Difference_In_Time = dt_date1.getTime() - dt_date2.getTime();
+  var Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24);
+  return Difference_In_Days
 }
 
 const reducere = (date) => {
   var result = false
   var today = new Date()
-  if(getDifferenceInDays(today,date) < 15){
+  var datenow = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
+  if(getDifferenceInDays(datenow,date) < 15){
     result = true;
   }
 return result
 }
+
+function topay(suma, data){
+  if(reducere(data) == true)
+    return suma/2
+  return suma
+}
+
 
 const Plata = ({setToken, token, setName, setRole}) => {
 
@@ -109,7 +120,7 @@ const Plata = ({setToken, token, setName, setRole}) => {
         <label for="">Total de plata: </label>
       </div>
       <div className="form-group">
-        <label for=""> {suma/2} </label>
+        <label for=""> {topay(suma,date)} </label>
       </div>
       <div className="form-group">
         <label for="exampleInputPassword1">Esti de acord cu termenii si conditiile?</label>
@@ -161,8 +172,8 @@ const Plata = ({setToken, token, setName, setRole}) => {
             alert.error("Trebuie sa introduci un email valid")
           )
         ):(
-          console.log(date)
-          //alert.error("Trebuie sa fii de acord cu termenii si conditiile")
+          //console.log(reducere(date))
+          alert.error("Trebuie sa fii de acord cu termenii si conditiile")
         )
         }  
       }>Plateste</button>
