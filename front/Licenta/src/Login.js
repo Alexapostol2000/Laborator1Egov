@@ -30,9 +30,16 @@ return result
 }
 
 function topay(suma, data){
-  if(reducere(data) == true)
-    return suma/2
-  return suma
+  if(reducere(data) == true){
+    var ret = "Beneficiati de reducere 50% pentru achitare in termen de 15 zile.\n Suma totala de plata este: "
+    ret+=suma/2;
+    ret+= " lei"
+    return ret
+  }
+  var ret = "Suma totala de plata este: "
+  ret+=suma;
+  ret+= " lei"
+  return ret
 }
 
 
@@ -115,9 +122,6 @@ const Plata = ({setToken, token, setName, setRole}) => {
       <div className="form-group">
         <label for="exampleInputPassword1">Valoarea amenzii</label>
         <input type="number" className="form-control" id="exampleInputPassword1" placeholder="Valoarea totala a amenzii exprimata in lei" onChange={e => setSuma(e.target.value)}/>
-      </div>
-      <div className="form-group">
-        <label for="">Total de plata: </label>
       </div>
       <div className="form-group">
         <label for=""> {topay(suma,date)} </label>
