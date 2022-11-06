@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import * as React from 'react';
 import './App.scss';
-import Login from './Login';
+import Plata from './Plata';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './Navbar';
 import Home from './Home';
@@ -30,7 +30,7 @@ function App() {
       <div className="content">
       <Routes>
         <Route exact path="/" element = {<Home />}/>
-        <Route path="/login" element = {<Login setToken={setToken} token={token}  setName={setName} setRole={setRole}/>}/>
+        <Route path="/plata" element = {<Plata setToken={setToken} token={token}  setName={setName} setRole={setRole}/>}/>
         <Route path="/register" element = {<Register setRole={setRole} role={role} token={token}  />}/>
         <Route path="/account" element = {<Account  token={token}   name={name} role={role}/>}/>
         <Route path="/logout" element = {<Logout setToken={setToken} token={token} setRole={setRole} role={role}/>}/>

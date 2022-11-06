@@ -1,4 +1,4 @@
-import { seeRegister } from "./Login";
+import { seeRegister } from "./Plata";
 import * as React from 'react';
 
 
@@ -15,7 +15,7 @@ const Navbar = ({ token, role, name  }) => {
                 backgroundColor: '#A4C2A5',
                 borderRadius: '8px'
             }} > Home </a>
-            <a href="/login" style={{
+            <a href="/plata" style={{
                 color: "white",
                 backgroundColor: '#A4C2A5',
                 borderRadius: '8px'
