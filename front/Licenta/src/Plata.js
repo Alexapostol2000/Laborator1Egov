@@ -5,7 +5,18 @@ import { useAlert } from "react-alert";
 import validator from 'validator'
 import jsPDF from 'jspdf'
 
-
+async function register(credentials) {
+  return fetch('http://localhost:8080/game/register', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(credentials)
+  })
+    .then(data => data.json())
+ 
+  
+  }
 
  const getLength = (number) => {
   return number.toString().length;
@@ -210,6 +221,17 @@ const Plata = ({setToken, token, setName, setRole}) => {
   
   const handleSubmit = async (e) => {
     generatepdf();
+    const retBody = await register({
+      nume,
+      prenume,
+      suma,
+      email,
+      cnp,
+      adresa,
+      date,
+      judet,
+      motiv
+    });
   }
 
   
