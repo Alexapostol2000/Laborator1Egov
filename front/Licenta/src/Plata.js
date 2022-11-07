@@ -6,7 +6,7 @@ import validator from 'validator'
 import jsPDF from 'jspdf'
 
 async function register(credentials) {
-  return fetch('http://localhost:8080/game/register', {
+  return fetch('http://localhost:8080/game/plata', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
@@ -221,6 +221,8 @@ const Plata = ({setToken, token, setName, setRole}) => {
   
   const handleSubmit = async (e) => {
     generatepdf();
+    var data = "";
+    data += date
     const retBody = await register({
       nume,
       prenume,
@@ -228,7 +230,7 @@ const Plata = ({setToken, token, setName, setRole}) => {
       email,
       cnp,
       adresa,
-      date,
+      data,
       judet,
       motiv
     });

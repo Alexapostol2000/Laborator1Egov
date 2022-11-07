@@ -11,11 +11,9 @@ public class Pay {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    @Column(unique = true)
     private String nume;
     private String prenume;
-    private Float suma;
+    private String suma;
     private String email;
     private String cnp;
     private String adresa;

@@ -15,6 +15,5 @@ public class PayService {
     public Pay processRegister(Pay pay) {
         payRepository.save(pay);
         return pay;
-
     }
 }
