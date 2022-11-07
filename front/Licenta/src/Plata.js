@@ -234,6 +234,7 @@ const Plata = ({setToken, token, setName, setRole}) => {
       judet,
       motiv
     });
+      alert.success("Plata efectuata cu succes");
   }
 
   
